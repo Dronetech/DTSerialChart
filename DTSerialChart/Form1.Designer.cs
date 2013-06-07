@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLog = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtFormat = new System.Windows.Forms.TextBox();
-            this.txtMax = new System.Windows.Forms.TextBox();
-            this.txtMin = new System.Windows.Forms.TextBox();
-            this.txtScale = new System.Windows.Forms.TextBox();
-            this.cmbPort = new System.Windows.Forms.ComboBox();
-            this.cmbBaud = new System.Windows.Forms.ComboBox();
-            this.btnSaveImage = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnSaveImage = new System.Windows.Forms.Button();
+            this.cmbBaud = new System.Windows.Forms.ComboBox();
+            this.cmbPort = new System.Windows.Forms.ComboBox();
+            this.txtScale = new System.Windows.Forms.TextBox();
+            this.txtMin = new System.Windows.Forms.TextBox();
+            this.txtMax = new System.Windows.Forms.TextBox();
+            this.txtFormat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,28 +56,29 @@
             // chart1
             // 
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(793, 347);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1007, 393);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // textBox1
+            // txtLog
             // 
-            this.textBox1.Location = new System.Drawing.Point(501, 353);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(292, 213);
-            this.textBox1.TabIndex = 1;
+            this.txtLog.Location = new System.Drawing.Point(501, 399);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLog.Size = new System.Drawing.Size(495, 167);
+            this.txtLog.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -94,65 +96,66 @@
             this.groupBox1.Controls.Add(this.txtMin);
             this.groupBox1.Controls.Add(this.txtMax);
             this.groupBox1.Controls.Add(this.txtFormat);
-            this.groupBox1.Location = new System.Drawing.Point(0, 353);
+            this.groupBox1.Location = new System.Drawing.Point(0, 391);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 213);
+            this.groupBox1.Size = new System.Drawing.Size(472, 175);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Controls";
             // 
-            // txtFormat
+            // label6
             // 
-            this.txtFormat.Location = new System.Drawing.Point(58, 59);
-            this.txtFormat.Name = "txtFormat";
-            this.txtFormat.Size = new System.Drawing.Size(408, 20);
-            this.txtFormat.TabIndex = 0;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "ScaleX";
             // 
-            // txtMax
+            // label5
             // 
-            this.txtMax.Location = new System.Drawing.Point(58, 85);
-            this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(86, 20);
-            this.txtMax.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "MinY";
             // 
-            // txtMin
+            // label4
             // 
-            this.txtMin.Location = new System.Drawing.Point(58, 111);
-            this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(86, 20);
-            this.txtMin.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "MaxY";
             // 
-            // txtScale
+            // label3
             // 
-            this.txtScale.Location = new System.Drawing.Point(58, 137);
-            this.txtScale.Name = "txtScale";
-            this.txtScale.Size = new System.Drawing.Size(86, 20);
-            this.txtScale.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Format";
             // 
-            // cmbPort
+            // label2
             // 
-            this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(58, 20);
-            this.cmbPort.Name = "cmbPort";
-            this.cmbPort.Size = new System.Drawing.Size(121, 21);
-            this.cmbPort.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(200, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Baud";
             // 
-            // cmbBaud
+            // label1
             // 
-            this.cmbBaud.FormattingEnabled = true;
-            this.cmbBaud.Location = new System.Drawing.Point(261, 20);
-            this.cmbBaud.Name = "cmbBaud";
-            this.cmbBaud.Size = new System.Drawing.Size(121, 21);
-            this.cmbBaud.TabIndex = 5;
-            // 
-            // btnSaveImage
-            // 
-            this.btnSaveImage.Location = new System.Drawing.Point(261, 82);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(195, 23);
-            this.btnSaveImage.TabIndex = 6;
-            this.btnSaveImage.Text = "Save Image";
-            this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Port";
             // 
             // btnStart
             // 
@@ -164,69 +167,79 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // label1
+            // btnSaveImage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Port";
+            this.btnSaveImage.Location = new System.Drawing.Point(261, 82);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(195, 23);
+            this.btnSaveImage.TabIndex = 6;
+            this.btnSaveImage.Text = "Save Image";
+            this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
-            // label2
+            // cmbBaud
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Baud";
+            this.cmbBaud.FormattingEnabled = true;
+            this.cmbBaud.Items.AddRange(new object[] {
+            "4800",
+            "9600",
+            "14400",
+            "19200"});
+            this.cmbBaud.Location = new System.Drawing.Point(261, 20);
+            this.cmbBaud.Name = "cmbBaud";
+            this.cmbBaud.Size = new System.Drawing.Size(121, 21);
+            this.cmbBaud.TabIndex = 5;
             // 
-            // label3
+            // cmbPort
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Format";
+            this.cmbPort.FormattingEnabled = true;
+            this.cmbPort.Location = new System.Drawing.Point(58, 20);
+            this.cmbPort.Name = "cmbPort";
+            this.cmbPort.Size = new System.Drawing.Size(121, 21);
+            this.cmbPort.TabIndex = 4;
             // 
-            // label4
+            // txtScale
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "MaxY";
+            this.txtScale.Location = new System.Drawing.Point(58, 137);
+            this.txtScale.Name = "txtScale";
+            this.txtScale.Size = new System.Drawing.Size(86, 20);
+            this.txtScale.TabIndex = 3;
+            this.txtScale.Text = "500";
             // 
-            // label5
+            // txtMin
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "MinY";
+            this.txtMin.Location = new System.Drawing.Point(58, 111);
+            this.txtMin.Name = "txtMin";
+            this.txtMin.Size = new System.Drawing.Size(86, 20);
+            this.txtMin.TabIndex = 2;
+            this.txtMin.Text = "-100";
             // 
-            // label6
+            // txtMax
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "ScaleX";
+            this.txtMax.Location = new System.Drawing.Point(58, 85);
+            this.txtMax.Name = "txtMax";
+            this.txtMax.Size = new System.Drawing.Size(86, 20);
+            this.txtMax.TabIndex = 1;
+            this.txtMax.Text = "100";
+            // 
+            // txtFormat
+            // 
+            this.txtFormat.Location = new System.Drawing.Point(58, 59);
+            this.txtFormat.Name = "txtFormat";
+            this.txtFormat.Size = new System.Drawing.Size(408, 20);
+            this.txtFormat.TabIndex = 0;
+            this.txtFormat.Text = "0|Serie 1,1|Serie 2,2|Serie 3";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(792, 566);
+            this.ClientSize = new System.Drawing.Size(1008, 566);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLog);
             this.Controls.Add(this.chart1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "DT Chart";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -241,7 +254,7 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
