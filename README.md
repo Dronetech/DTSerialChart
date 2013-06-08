@@ -28,17 +28,24 @@ All data from serial port is saved in a textbox so it can be exported after to e
 
 The series are generated based on a csv with the following format:
 
-<Index>|<title 1>,<Index>|<title 2>
+< Index >|< title 1 >,< Index >|< title 2 >
 
 Index is the position on the csv stream that Y axes data is and the title of the Series.
 
 Example: 
+
 csv stream 				-> 123,340
+
 series format string 	-> 0|Sensor A, 1|Sensor B
+
 Result:
+
 Series 1 title = Sensor A 
+
 Serias 1 Y Axes value = 123
+
 Series 2 title = Sensor B 
+
 Serias 2 Y Axes value = 340
 
 
