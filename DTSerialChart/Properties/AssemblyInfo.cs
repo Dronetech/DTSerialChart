@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DTSerialChart")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AXA Portugal")]
+[assembly: AssemblyCompany("DroneTech")]
 [assembly: AssemblyProduct("DTSerialChart")]
-[assembly: AssemblyCopyright("Copyright © AXA Portugal 2013")]
+[assembly: AssemblyCopyright("Copyright © Dronetech 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
