@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Threading;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace DTSerialChart
 {
@@ -17,16 +20,36 @@ namespace DTSerialChart
         SerialPort port; 
         public Form1()
         {
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(4000);
             InitializeComponent();
+            t.Abort();
+           
+           
+        }
+
+        private void SplashScreen()
+        {
+            Application.Run(new SplashScreen());
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            refreshSerialPorts();
+
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            lblVersion.Text = "Version: " + fvi.FileVersion;
+           
+        }
+
+        private void refreshSerialPorts()
         {
             var ports = SerialPort.GetPortNames();
             cmbPort.DataSource = ports;
 
             cmbBaud.SelectedIndex = 0;
-           
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -53,7 +76,7 @@ namespace DTSerialChart
                     port.BaudRate = Convert.ToInt16(cmbBaud.SelectedItem.ToString());
                     port.Open();
                 }
-               cmbBaud.Enabled = cmbPort.Enabled= txtFormat.Enabled = txtMax.Enabled = txtMin.Enabled = txtScale.Enabled = false;
+               cmbBaud.Enabled = cmbPort.Enabled= txtFormat.Enabled = txtMax.Enabled = txtMin.Enabled = txtScale.Enabled = btnRefresh.Enabled= false;
                started = true;
                btnStart.Text = "Stop";
             }
@@ -64,7 +87,7 @@ namespace DTSerialChart
                     port.Close();
                 }
 
-                cmbBaud.Enabled = cmbPort.Enabled = txtFormat.Enabled = txtMax.Enabled = txtMin.Enabled = txtScale.Enabled = true;
+                cmbBaud.Enabled = cmbPort.Enabled = txtFormat.Enabled = txtMax.Enabled = txtMin.Enabled = txtScale.Enabled = btnRefresh.Enabled= true;
                 x = 0;
                 started = false;
                 btnStart.Text = "Start";
@@ -117,6 +140,24 @@ namespace DTSerialChart
         private void btnSaveImage_Click(object sender, EventArgs e)
         {
             chart1.SaveImage(Guid.NewGuid().ToString()+".png", System.Drawing.Imaging.ImageFormat.Png);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(goHome));
+            t.Start();
+          
+        }
+
+        private void goHome()
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo(linkLabel1.Text);
+            Process.Start(sInfo);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            refreshSerialPorts();
         }
 
     }

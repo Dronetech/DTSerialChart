@@ -49,6 +49,10 @@
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtMax = new System.Windows.Forms.TextBox();
             this.txtFormat = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +86,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -142,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 28);
+            this.label2.Location = new System.Drawing.Point(307, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 9;
@@ -184,8 +189,12 @@
             "4800",
             "9600",
             "14400",
-            "19200"});
-            this.cmbBaud.Location = new System.Drawing.Point(261, 20);
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200"});
+            this.cmbBaud.Location = new System.Drawing.Point(345, 24);
             this.cmbBaud.Name = "cmbBaud";
             this.cmbBaud.Size = new System.Drawing.Size(121, 21);
             this.cmbBaud.TabIndex = 5;
@@ -193,7 +202,7 @@
             // cmbPort
             // 
             this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(58, 20);
+            this.cmbPort.Location = new System.Drawing.Point(58, 24);
             this.cmbPort.Name = "cmbPort";
             this.cmbPort.Size = new System.Drawing.Size(121, 21);
             this.cmbPort.TabIndex = 4;
@@ -230,17 +239,61 @@
             this.txtFormat.TabIndex = 0;
             this.txtFormat.Text = "0|Serie 1,1|Serie 2,2|Serie 3";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkVisited = true;
+            this.linkLabel1.Location = new System.Drawing.Point(868, 569);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(128, 13);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://www.dronetech.eu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(9, 569);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(103, 13);
+            this.lblVersion.TabIndex = 4;
+            this.lblVersion.Text = "DT Serial Chart v0.1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(435, 569);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "© DroneTech 2013 ";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(185, 22);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(94, 23);
+            this.btnRefresh.TabIndex = 14;
+            this.btnRefresh.Text = "Refresh Ports";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1008, 566);
+            this.ClientSize = new System.Drawing.Size(1008, 588);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblVersion);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.chart1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DT Chart";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -270,6 +323,10 @@
         private System.Windows.Forms.TextBox txtMin;
         private System.Windows.Forms.TextBox txtMax;
         private System.Windows.Forms.TextBox txtFormat;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

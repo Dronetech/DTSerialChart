@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTSerialChart", "DTSerialChart\DTSerialChart.csproj", "{D23E44D8-15F7-4516-9442-5CB07BD42770}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DTSerialChartSetup", "DTSerialChartSetup\DTSerialChartSetup.vdproj", "{68880B40-A515-41E5-B81E-52E08BC1D6FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,8 @@ Global
 		{D23E44D8-15F7-4516-9442-5CB07BD42770}.Debug|x86.Build.0 = Debug|x86
 		{D23E44D8-15F7-4516-9442-5CB07BD42770}.Release|x86.ActiveCfg = Release|x86
 		{D23E44D8-15F7-4516-9442-5CB07BD42770}.Release|x86.Build.0 = Release|x86
+		{68880B40-A515-41E5-B81E-52E08BC1D6FA}.Debug|x86.ActiveCfg = Debug
+		{68880B40-A515-41E5-B81E-52E08BC1D6FA}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
